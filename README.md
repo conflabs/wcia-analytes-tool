@@ -1,5 +1,5 @@
-# wcia analytes maintainence tool
-Consumes OpenTHC Lab Metrics and produces a flexible json object for use in WA State interop.
+# wcia-analytes-tool
+Consumes OpenTHC Lab Metrics and WCIA Analytes, and produces diff objects and docs for use in WA State interop.
 
 ----------------------------------------
 
