@@ -42,10 +42,7 @@ From the CLI, run `php makeNewOpenThcLabMetrics.php` to create a list of new Ope
 
 ## Create Documents
 
-1. Load the current and most up-to-date json folder from [wcia-analytes](https://github.com/conflabs/wcia-analytes) 
-into the `storage/` directory.  
-2. Make a directory in the storage folder called `storage/docs`.  
-3. From the CLI, run `php makeMarkDown.php` to create a series of mark down docs in the `storage/docs` folder.  
+From the CLI, run `php makeMarkDown.php` to create a series of mark down docs in the `storage/docs` folder.  
 
 ----------------------------------------
 
