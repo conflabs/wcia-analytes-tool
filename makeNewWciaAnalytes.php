@@ -10,7 +10,7 @@ function analyteGenerator(array $nonAnalytes): \Generator
 
         $nonAnalyte = collect($nonAnalyte)->toArray();
         $ulid = $nonAnalyte['id'];
-        $uuid = \Ramsey\Uuid\Uuid::uuid4()->toString();
+        $uuid = null; //\Ramsey\Uuid\Uuid::uuid4()->toString()
         $scientific_name = strtolower($nonAnalyte['name']);
         $common_names = [strtolower($nonAnalyte['name'])];
         $category = strtolower($nonAnalyte['type']);
