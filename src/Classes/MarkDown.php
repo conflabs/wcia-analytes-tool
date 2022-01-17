@@ -13,7 +13,6 @@ class MarkDown
         $title .= "\n";
 
         $text = "* ULID: `" . $analyte->ulid . "`\n";
-//        $text .= "* UUID: `" . $analyte->uuid . "`\n"; [last used v.0.9.7]
         $text .= "* Scientific Name: `" . $analyte->scientific_name . "`\n";
         $text .= "* Common Names: `";
         foreach ($analyte->common_names as $name) {
