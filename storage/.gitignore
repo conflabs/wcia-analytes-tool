@@ -1,9 +1,11 @@
 lab-metric/
+lab-metric-type/
 json/
 
 *.json
 
 !app/
 !docs/
+!docs-assays/
 !yamls/
 !.gitignore
