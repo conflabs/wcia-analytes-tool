@@ -31,4 +31,28 @@ class MarkDown
 
         return $title . $text . $code;
     }
+
+    public static function convertAssay(Assay $assay): string
+    {
+        $title = "----------------------------------------\n";
+        $title .= "\n";
+        $title .= "## " . ucwords($assay->assay_name) . "\n";
+        $title .= "\n";
+
+        $text = "* ULID: `" . $assay->ulid . "`\n";
+        $text .= "* Assay Name: `" . $assay->assay_name . "`\n";
+        $text .= "* Common Names: `";
+        foreach ($assay->common_names as $name) {
+            $text .= $name . ', ';
+        }
+        $text = rtrim($text, ', ');
+        $text .= "`\n";
+
+        $code = "```json\n";
+        $code .= collect($assay)->toJson(JSON_PRETTY_PRINT) . "\n";
+        $code .= "```\n";
+        $code .= "\n";
+
+        return $title . $text . $code;
+    }
 }

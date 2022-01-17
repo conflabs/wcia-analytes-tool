@@ -3,7 +3,7 @@
 namespace Conflabs\WciaGenerator\Classes;
 
 
-class Analyte
+final class Analyte
 {
 
     /**

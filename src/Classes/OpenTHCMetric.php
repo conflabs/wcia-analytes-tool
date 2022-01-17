@@ -2,7 +2,7 @@
 
 namespace Conflabs\WciaGenerator\Classes;
 
-class OpenTHCMetric
+final class OpenTHCMetric
 {
 
     /**
