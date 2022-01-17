@@ -15,7 +15,7 @@ function analyteGenerator(array $contents): Generator
     foreach ($contents as $analyte) {
 
         yield new Analyte(
-          $analyte->ulid, $analyte->uuid, $analyte->scientific_name, $analyte->common_names, $analyte->category, $analyte->cas_rn
+          $analyte->ulid, $analyte->scientific_name, $analyte->common_names, $analyte->category, $analyte->cas_rn
         );
     }
 }
