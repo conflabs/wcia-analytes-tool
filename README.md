@@ -1,7 +1,7 @@
 # wcia-analytes-tool
 Consumes OpenTHC Lab Metrics and WCIA Analytes, and produces diff objects and docs for use in WA State interop.
 
-### version 0.9.8
+### version 0.9.9
 
 ----------------------------------------
 
@@ -17,14 +17,21 @@ Clone the [https://github.com/openthc/api.git](https://github.com/openthc/api.gi
 Clone the [https://github.com/conflabs/wcia-analytes.git](https://github.com/conflabs/wcia-analytes.git) repository and 
 copy its `json/` folder to this repository's `storage/` folder (i.e., `storage/json`).
 
-3. From the CLI, run `php makeOpenTHCResource.php` to create the OpenTHC Json Resource.  
-   It is saved to the storage dir.  
+3. Load the storage area with the WCIA assays json files.
+Clone the [https://github.com/conflabs/wcia-assays.git](https://github.com/conflabs/wcia-assays.git) repository and
+   copy its `json/` folder to this repository's `storage/json-assays` folder.
+
+4. From the CLI, run `php makeOpenTHCLabMetricsResource.php` to create the OpenTHC Lab Metric Json Resource.  
+   It is saved to the storage dir.
+
+5. From the CLI, run `php makeOpenTHCLabMetricTypesResource.php` to create the OpenTHC Lab Metric Types Json Resource.  
+   It is saved to the storage dir.
 
 ----------------------------------------
 
 ## Find Missing OpenTHC Lab Metrics
 
-From the CLI, run `php makeNotInWciaList.php` to create a list of OpenTHC lab metrics that are not in the WCIA list.
+From the CLI, run `php makeAnalytesNotInWciaList.php` to create a list of OpenTHC lab metrics that are not in the WCIA list.
 
 ## Convert Missing OpenTHC Lab Metrics to WCIA Analytes
 
@@ -34,7 +41,7 @@ From the CLI, run `php makeNewWciaAnalytes.php` to create a list of new WCIA ana
 
 ## Find Missing WCIA Analytes
 
-From the CLI, run `php makeNotInOpenThcList.php` to create a list of WCIA analytes that are not in the OpenTHC list.
+From the CLI, run `php makeLabMetricsNotInOpenThcList.php` to create a list of WCIA analytes that are not in the OpenTHC list.
 
 ## Convert Missing WCIA Analytes to OpenTHC Lab Metrics 
 
@@ -44,7 +51,11 @@ From the CLI, run `php makeNewOpenThcLabMetrics.php` to create a list of new Ope
 
 ## Create Documents
 
-From the CLI, run `php makeMarkDown.php` to create a series of mark down docs in the `storage/docs` folder.  
+### wcia-analytes  
+From the CLI, run `php makeAnalytesMarkDown.php` to create a series of mark down docs in the `storage/docs` folder.
+
+### wcia-assays
+From the CLI, run `php makeAssaysMarkDown.php` to create a series of mark down docs in the `storage/docs` folder.
 
 ----------------------------------------
 
