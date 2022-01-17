@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$metrics = json_decode(file_get_contents(__DIR__ . '/storage/openThcLabMetrics.json'));
+$metrics = json_decode(file_get_contents(__DIR__ . '/storage/app/openThcLabMetrics.json'));
 $analytes = json_decode(file_get_contents(__DIR__ . '/storage/json/allAnalytes.json'));
 
 $notInWciaList = [];
