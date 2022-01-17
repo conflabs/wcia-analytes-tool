@@ -1,6 +1,8 @@
 # wcia-analytes-tool
 Consumes OpenTHC Lab Metrics and WCIA Analytes, and produces diff objects and docs for use in WA State interop.
 
+### version 0.9.8
+
 ----------------------------------------
 
 # Getting Started
