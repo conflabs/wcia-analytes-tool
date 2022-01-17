@@ -1,5 +1,7 @@
 <?php declare(strict_types=1);
 
+use Conflabs\WciaGenerator\Classes\Analyte;
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 $missing = json_decode(file_get_contents(__DIR__ . '/storage/app/notInWciaList.json'));
@@ -10,13 +12,12 @@ function analyteGenerator(array $nonAnalytes): \Generator
 
         $nonAnalyte = collect($nonAnalyte)->toArray();
         $ulid = $nonAnalyte['id'];
-        $uuid = null; //\Ramsey\Uuid\Uuid::uuid4()->toString()
         $scientific_name = strtolower($nonAnalyte['name']);
         $common_names = [strtolower($nonAnalyte['name'])];
         $category = strtolower($nonAnalyte['type']);
         $cas_rn = $nonAnalyte['cas'];
 
-        yield new \Conflabs\WciaGenerator\Classes\Analyte($ulid, $uuid, $scientific_name, $common_names, $category, $cas_rn);
+        yield new Analyte($ulid, $scientific_name, $common_names, $category, $cas_rn);
     }
 }
 
