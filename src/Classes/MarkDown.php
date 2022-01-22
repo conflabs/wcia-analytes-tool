@@ -55,4 +55,26 @@ class MarkDown
 
         return $title . $text . $code;
     }
+
+    public static function convertUom(UnitOfMeasure $uom): string
+    {
+        $title = "----------------------------------------\n";
+        $title .= "\n";
+        $title .= "## " . ucwords($uom->symbol) . "\n";
+        $title .= "\n";
+
+        $text = "* ULID: `" . $uom->ulid . "`\n";
+        $text .= "* Symbol: `" . $uom->symbol . "`\n";
+        $text .= "* Name: `" . $uom->name . "`\n";
+        $text .= "* Plural: `" . $uom->plural . "`\n";
+        $text .= "* Description: `" . $uom->description . "`\n";
+        $text .= "\n";
+
+        $code = "```json\n";
+        $code .= collect($uom)->toJson(JSON_PRETTY_PRINT) . "\n";
+        $code .= "```\n";
+        $code .= "\n";
+
+        return $title . $text . $code;
+    }
 }

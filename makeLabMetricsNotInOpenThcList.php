@@ -3,7 +3,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 $metrics = json_decode(file_get_contents(__DIR__ . '/storage/app/openThcLabMetrics.json'));
-$analytes = json_decode(file_get_contents(__DIR__ . '/storage/json/allAnalytes.json'));
+$analytes = json_decode(file_get_contents(__DIR__ . '/storage/json-analytes/allAnalytes.json'));
 
 $notInOpenThcList = [];
 foreach ($analytes as $analyte) {

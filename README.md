@@ -21,7 +21,7 @@ copy its `json/` folder to this repository's `storage/` folder (i.e., `storage/j
 Clone the [https://github.com/conflabs/wcia-assays.git](https://github.com/conflabs/wcia-assays.git) repository and
    copy its `json/` folder to this repository's `storage/json-assays` folder.
 
-4. From the CLI, run `php makeOpenTHCLabMetricsResource.php` to create the OpenTHC Lab Metric Json Resource.  
+4. From the CLI, run `php makeOpenTHCLabMetricResource.php` to create the OpenTHC Lab Metric Json Resource.  
    It is saved to the storage dir.
 
 5. From the CLI, run `php makeOpenTHCLabMetricTypesResource.php` to create the OpenTHC Lab Metric Types Json Resource.  

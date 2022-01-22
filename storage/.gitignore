@@ -1,5 +1,8 @@
 lab-metric/
 lab-metric-type/
+json-analytes/
+json-assays/
+json-uoms/
 json/
 
 *.json
